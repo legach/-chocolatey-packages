@@ -62,16 +62,8 @@
 
 4. ChocolateyInstall.ps1:
 
-- For embedded binaries - use `$fileLocation` (`$file`/`$file64`) and
-  `Install-ChocolateyInstallPackage`/ `Get-ChocolateyUnzip`.
 - Downloading binaries at runtime - use `$url`/`$url64` and
   `Install-ChocolateyPackage` / `Install-ChocolateyZipPackage`.
-- Other needs (creating files, setting registry keys), use regular
-  PowerShell to do so or see if there is a function already defined:
-  https://docs.chocolatey.org/en-us/create/functions
-- There may also be functions available in extension packages, see
-  https://community.chocolatey.org/packages?q=id%3A.extension for examples and
-  availability.
 - Clean out the comments and sections you are not using.
 
 5. Test the package to ensure install/uninstall work appropriately.

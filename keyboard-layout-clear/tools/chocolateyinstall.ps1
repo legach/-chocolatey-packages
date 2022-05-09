@@ -11,6 +11,7 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
   softwareName  = 'KeyboardLayoutClear'
+  FileFullPath  = "$toolsDir\KeyboardLayoutClear.exe"
 
   checksum      = '4B791F359751E5A5C731881204A4B555C09EF6B5F3C6651B5869A22647A9C86F'
   checksumType  = 'sha256'
@@ -18,4 +19,4 @@ $packageArgs = @{
   checksumType64= 'sha256'
 }
 
-Install-ChocolateyPackage @packageArgs 
+Get-ChocolateyWebFile @packageArgs
