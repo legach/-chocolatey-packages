@@ -30,16 +30,6 @@
     fill out the LICENSE and VERIFICATION file (see 3 below and those
     files for specifics).
 
-    NOTE: You can choose to download binaries at runtime, but be sure
-     the download location will remain stable. See the next section.
-
-  Do Not Have Distribution Rights?
-    - Note: Packages built this way cannot be 100% reliable, but it's a
-      constraint of publicly available packages and there is little
-      that can be done to change that. See
-      https://docs.chocolatey.org/en-us/community-repository/community-packages-disclaimer
-      to better understand the limitations of a publicly available
-      repository.
     Download Location is Publicly Available?
       You will need to download the runtime files from their official
       location at runtime. Use `$url`/`$url64` and
@@ -60,39 +50,12 @@
 
 2. Determine Package Type:
 
-- Installer Package - contains an installer (everything in template is
-  geared towards this type of package)
-- Zip Package - downloads or embeds and unpacks archives, may unpack
-  and run an installer using `Install-ChocolateyInstallPackage` as a
-  secondary step.
 - Portable Package - Contains runtime binaries (or unpacks them as a
   zip package) - cannot require administrative permissions to install
   or use
-- Config Package - sets config like files, registry keys, etc
-- Extension Package - Packages that add PowerShell functions to
-  Chocolatey - https://docs.chocolatey.org/en-us/features/extensions
-- Template Package - Packages that add templates like this for `choco
-  new -t=name` - https://docs.chocolatey.org/en-us/guides/create/create-custom-package-templates
-- Other - there are other types of packages as well, these are the main
-  package types seen in the wild
 
 3. Fill out the package contents:
 
-- tools\chocolateyBeforeModify.ps1 - remove if you have no processes
-  or services to shut down before upgrade/uninstall
-- tools\LICENSE.txt / tools\VERIFICATION.txt - Remove if you are not
-  embedding binaries. Keep and fill out if you are embedding binaries
-  in the package AND pushing to the community repository, even if you
-  are the author of software. The file becomes easier to fill out
-  (does not require changes each version) if you are the software
-  vendor. If you are building packages for internal use (organization,
-  etc), you don't need these files as you are not subject to
-  distribution rights internally.
-- tools\chocolateyUninstall.ps1 - remove if autouninstaller can
-  automatically uninstall and you have nothing additional to do during
-  uninstall
-- Readme.txt - delete this file once you have read over and used
-  anything you've needed from here
 - nuspec - fill this out, then clean out all the comments (you may wish
   to leave the headers for the package vs software metadata)
 - tools\chocolateyInstall.ps1 - instructions in next section.
