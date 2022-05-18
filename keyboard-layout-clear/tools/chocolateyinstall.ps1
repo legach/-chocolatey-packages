@@ -2,14 +2,12 @@
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://github.com/legach/keyboard-layout-clear/releases/download/v1.0.0.0/KeyboardLayoutClear.exe' 
-$url64      = 'https://github.com/legach/keyboard-layout-clear/releases/download/v1.0.0.0/KeyboardLayoutClear.exe' 
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   fileType      = 'EXE'
   url           = $url
-  url64bit      = $url64
   softwareName  = 'KeyboardLayoutClear'
   FileFullPath  = "$toolsDir\KeyboardLayoutClear.exe"
 
