@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>keyboard-layout-clear</id>
-    <version>1.0.0.0</version>
+    <version>1.0.1</version>
     <packageSourceUrl>https://github.com/legach/chocolatey-packages/tree/main/keyboard-layout-clear</packageSourceUrl>
     <title>KeyboardLayoutClear (Install)</title>
     <authors>legach</authors>
@@ -14,8 +14,7 @@
     <summary>It helps to remove phantom keyboard layout</summary>
     <description>Can't remove a new keyboard layout in Windows 10? It helps to remove phantom keyboard layout. Probably someone knows how to prevent this, but my tool just explicity remove phantom keyboards.</description>
     <releaseNotes>
-    * Show layouts
-    * Remove layouts by id
+    * Handle negative identifier of keyboard layout
     </releaseNotes>
   </metadata>
   <files>

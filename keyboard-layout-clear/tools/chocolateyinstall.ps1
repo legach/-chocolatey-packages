@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/legach/keyboard-layout-clear/releases/download/v1.0.0.0/KeyboardLayoutClear.exe' 
+$url        = 'https://github.com/legach/keyboard-layout-clear/releases/download/v1.0.1/KeyboardLayoutClear.exe' 
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -11,9 +11,9 @@ $packageArgs = @{
   softwareName  = 'KeyboardLayoutClear'
   FileFullPath  = "$toolsDir\KeyboardLayoutClear.exe"
 
-  checksum      = '4B791F359751E5A5C731881204A4B555C09EF6B5F3C6651B5869A22647A9C86F'
+  checksum      = '21051337E334E19B64C9695ADA8BAA28BA03F55083340D7F705205F1FC5F9A3B'
   checksumType  = 'sha256'
-  checksum64    = '4B791F359751E5A5C731881204A4B555C09EF6B5F3C6651B5869A22647A9C86F'
+  checksum64    = '21051337E334E19B64C9695ADA8BAA28BA03F55083340D7F705205F1FC5F9A3B'
   checksumType64= 'sha256'
 }
 
